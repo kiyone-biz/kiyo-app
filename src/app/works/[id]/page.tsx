@@ -2,13 +2,13 @@ import { getAllWorks } from '@/lib/works';
 import { Work } from '@/types/work';
 import { notFound } from 'next/navigation';
 
-type Props = {
+type PageProps  = {
   params: {
     id: string;
   };
 };
 
-const WorkDetailPage = async ({ params }: Props) => {
+const WorkDetailPage = async ({ params }: PageProps ) => {
   const works = await getAllWorks();
   const work: Work | undefined = works.find((item) => item.id === params.id);
 
