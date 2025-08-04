@@ -1,5 +1,5 @@
-import { getAllWorks } from '@/lib/works';
 import { WorkCard } from '@/components/WorkCard';
+import { getAllWorks } from '@/lib/works';
 
 const WorksPage = async () => {
   const works = await getAllWorks();
